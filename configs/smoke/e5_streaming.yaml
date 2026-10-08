@@ -1,0 +1,7 @@
+# E5: streaming replay of the 9 official test subjects through device, link and cloud.
+seed: 0
+n_kernels: 40
+levels: [0, 2, 4]
+lab_subject: 2
+link: {name: wifi, rate_bps: 1.0e+7, one_way_s: 0.01, joule_per_byte: 5.0e-8}
+privacy: !include ../privacy.yaml

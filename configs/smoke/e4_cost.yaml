@@ -1,0 +1,14 @@
+# Smoke run. Not a result.
+# magnitude, not measurements of any product; they are swept in E4 for that reason.
+seed: 0
+n_kernels: 40
+reps: 3
+devices:
+  - {name: microcontroller, ops_per_s: 1.0e+8, joule_per_op: 1.0e-10}   # Cortex-M class
+  - {name: phone, ops_per_s: 1.0e+10, joule_per_op: 1.0e-11}            # application processor
+links:
+  - {name: ble, rate_bps: 2.0e+5, one_way_s: 0.03, joule_per_byte: 2.0e-7}
+  - {name: wifi, rate_bps: 1.0e+7, one_way_s: 0.01, joule_per_byte: 5.0e-8}
+  - {name: cellular, rate_bps: 1.0e+6, one_way_s: 0.06, joule_per_byte: 1.0e-6}
+radio_factors: [0.01, 0.03, 0.1, 0.3, 1, 3, 10]
+privacy: !include ../privacy.yaml

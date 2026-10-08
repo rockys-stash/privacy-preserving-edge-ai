@@ -1,0 +1,5 @@
+seed: 0
+folds: 3
+epsilons: [1, 4]
+workers: 1
+privacy: !include ../privacy.yaml

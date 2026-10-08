@@ -1,0 +1,6 @@
+# E3: local differential privacy sweep for edge features and local labels (L3).
+seed: 0
+folds: 5
+epsilons: [0.1, 0.25, 0.5, 1, 2, 4, 8, 16, 32, 64]
+workers: 4
+privacy: !include privacy.yaml

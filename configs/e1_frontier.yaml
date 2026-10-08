@@ -1,0 +1,7 @@
+# E1: the 3 architectures x 5 levels frontier.
+seeds: [0, 1, 2]
+folds: 5              # subject-grouped cross-validation
+n_kernels: 500        # random convolutional kernels for the centralized cloud model
+share: 0.5            # share of each subject's segments the adversary enrols
+workers: 4
+privacy: !include privacy.yaml

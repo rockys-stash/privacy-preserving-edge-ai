@@ -1,0 +1,9 @@
+# E2: is the exposure ranking stable across adversaries?
+seed: 0
+n_kernels: 500
+shares: [0.1, 0.3, 0.5, 0.7]
+families: [strong, linear]
+reference_share: 0.5
+reference_family: strong
+workers: 4
+privacy: !include privacy.yaml

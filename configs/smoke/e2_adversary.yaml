@@ -1,0 +1,8 @@
+seed: 0
+n_kernels: 40
+shares: [0.3, 0.5]
+families: [strong, linear]
+reference_share: 0.5
+reference_family: strong
+workers: 1
+privacy: !include ../privacy.yaml

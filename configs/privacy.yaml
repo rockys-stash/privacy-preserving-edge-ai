@@ -1,0 +1,9 @@
+# Privacy level parameters (docs/PLAN.md section 2). Shared by every experiment.
+raw_downsample: 2      # L2 raw: 50 Hz -> 25 Hz
+raw_bits: 8            # L2 raw: quantisation
+raw_noise: 0.5         # L3 raw: Gaussian sigma as a share of each channel's spread (no formal guarantee)
+feature_bits: 4        # L2 features: quantisation
+feature_epsilon: 4.0   # L3 features: Laplace mechanism, epsilon per payload
+label_epsilon: 4.0     # L3 local: k-ary randomised response, epsilon per payload
+smooth: 4              # L2 local: causal majority filter over the last 4 windows
+block: 8               # L4: windows per aggregated payload
