@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below, and cite the dataset (Anguita et al., ESANN 2013)."
+title: "Privacy-preserving edge AI benchmark: accuracy, privacy and compute cost of centralized, edge and fully local activity recognition"
+type: software
+authors:
+  - alias: rockys-stash
+version: 0.1.0
+license: MIT
+repository-code: "https://github.com/rockys-stash/privacy-preserving-edge-ai"
+keywords:
+  - edge AI
+  - privacy
+  - local differential privacy
+  - human activity recognition
+  - re-identification
+  - benchmark
+references:
+  - type: conference-paper
+    title: "A Public Domain Dataset for Human Activity Recognition Using Smartphones"
+    authors:
+      - family-names: Anguita
+        given-names: Davide
+      - family-names: Ghio
+        given-names: Alessandro
+      - family-names: Oneto
+        given-names: Luca
+      - family-names: Parra
+        given-names: Xavier
+      - family-names: Reyes-Ortiz
+        given-names: Jorge L.
+    conference:
+      name: "21st European Symposium on Artificial Neural Networks, Computational Intelligence and Machine Learning (ESANN 2013)"
+    year: 2013
