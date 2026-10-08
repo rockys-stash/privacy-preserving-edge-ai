@@ -1,0 +1,27 @@
+# Decisions
+
+**D1. UCI HAR from a checksummed GitHub mirror (2026-10-08).** The UCI repository, Zenodo, PhysioNet, Figshare and similar hosts are blocked by this environment's network policy. A copy of the original release archive on raw.githubusercontent.com is used instead, accepted only if its SHA-256 matches a pinned value and its structure matches the dataset's README. The data is not committed: its licence forbids commercial use and requires attribution (`data/DATASET.md`).
+
+**D2. Recordings rebuilt from overlapping windows.** The spec asks for a replayed sensor pipeline, but the release ships windows. Consecutive windows of one recording share 64 samples exactly, so they are joined back into 857 continuous segments. This makes a sample-by-sample replay possible and gives natural boundaries for smoothing, aggregation and leakage-free adversary enrolment.
+
+**D3. No deep-learning framework.** PyTorch's wheel index is blocked. The centralized cloud model is a ROCKET-style random-kernel transform with a ridge classifier, which is competitive on this kind of signal and fast on CPU; the edge cloud model is gradient-boosted trees; the device model is an int8 logistic regression. All are standard and fast enough to run the full grid with 3 seeds × 5 folds on 4 CPUs.
+
+**D4. The same five levels for every architecture, applied to what that architecture sends.** Levels are cumulative steps (minimise, coarsen, perturb, aggregate), so a cell's position on the frontier is attributable to a step, not to an arbitrary per-architecture recipe. L4 definitions were fixed after implementation (they differ from PLAN's first draft): centralized sends the middle window of each block of 8 (a block mean of raw signal would no longer be a signal the cloud model can read); edge sends the mean of the block's clean features, then L2–L3 once; fully local sends the block's majority label with randomised response. PLAN was updated.
+
+**D5. Exposure is measured by an enrolled re-identification adversary.** "Data exposure score" needs a number that means the same thing for raw signals, features and labels. Re-identifying the person among the 30 enrolled, from a single payload, does: it is the risk that a sensor stream identifies who is wearing it. Enrolment uses whole segments so test payloads never share samples with enrolment payloads. It is an empirical lower bound against one attacker; E2 checks that the ranking holds across attacker strength and enrolment size.
+
+**D6. Utility on unseen people.** All accuracy is subject-grouped: the people in a test fold are never seen by the cloud model, the device model or the calibration constants (quantisation ranges and clipping bounds are "firmware constants" fitted on training people). This is the deployment case: a model shipped to someone new.
+
+**D7. Cost is analytic plus modelled, not a hardware measurement.** There is no physical edge device or radio here. Operation counts and bytes are exact for the implementation; wall times are measured on this machine for scale; latency and energy combine them with stated device and link profiles (round orders of magnitude, not products), and E4 sweeps the radio's energy per byte over three orders of magnitude so the conclusion's dependence on that assumption is visible.
+
+**D8. "Transmit nothing" competes on the Pareto set, and exposure is floored at chance there.** A cell less accurate than predicting the majority class while being no less private than sending nothing should not appear on the frontier. Measured re-identification slightly below chance is sampling noise, not extra privacy, so the comparison uses max(measured, 1/30). The table still reports the measured value.
+
+**D9. ε is per payload.** The Laplace and randomised-response mechanisms give ε-local differential privacy for one payload. A person sends one every 1.28 s, so the guarantee over a session composes; the report says so next to every ε.
+
+**D10. Results provenance flags uncommitted files.** Each run records its commit and whether `src/` or `configs/` had uncommitted or untracked changes. The E1 run marked "dirty" was started while `src/edgebench/report.py` (the report writer, which no experiment imports) was not yet committed; the experiment code itself was at the recorded commit. See REPORT for the rerun check.
+
+**D11. Accent moved from teal to violet.** DESIGN first chose a teal accent. The validated three-series palette (blue, orange, aqua) puts aqua next to teal, so selection could be mistaken for the fully local series. The accent is violet, which is not a series colour; DESIGN was updated.
+
+**D12. Smoke configs and a subject subset for CI and tests.** The full benchmark takes about an hour on 4 CPUs. `configs/smoke/` with `EDGEBENCH_SUBJECTS` (8 people, 40 kernels, 1 seed) runs every experiment in about three minutes; it checks the pipeline and is never reported. The subset is recorded in each run's provenance.
+
+**D13. Experiment scope adjusted from PLAN's first draft.** E3's ε range was widened to 64 because development checks showed edge features near chance at ε = 4, so the sweep would otherwise not show where they recover. E4 uses two device profiles (microcontroller, phone) as well as three links, because the energy break-even depends on the device as much as the radio. E5 replays the 9 official test people rather than all 30, so that every streamed window comes from someone the models never saw, and adds L4 to show the block wait in latency.

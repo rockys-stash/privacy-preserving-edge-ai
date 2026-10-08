@@ -1,5 +1,7 @@
 # Plan: Privacy-Preserving Edge AI Benchmark
 
+> Updated after implementation where the build differs from the first draft; each change is recorded in `docs/DECISIONS.md` (D4, D13).
+
 ## 1. Scope
 
 The spec asks for one thing: quantify the **accuracy ↔ privacy ↔ compute-cost** trade-off across three architectures, at graded privacy levels, on a sensor pipeline replayed from a documented public dataset.
@@ -12,8 +14,8 @@ The spec asks for one thing: quantify the **accuracy ↔ privacy ↔ compute-cos
 
 Deliverables:
 
-1. **Sensor replay** (`edgebench.sensors`). Continuous per-subject inertial streams (3-axis total acceleration, body acceleration and angular velocity at 50 Hz) reconstructed from the UCI HAR windows, replayed sample by sample on a simulated clock.
-2. **Device runtime and cloud service** (`edgebench.device`, `edgebench.cloud`). A device that buffers 2.56 s windows with 50% overlap and runs its architecture's on-device stage, a modelled uplink, and a cloud that receives payloads and produces decisions. The three architectures are runnable configurations of this one pipeline (`configs/architectures/*.yaml`).
+1. **Sensor replay** (`edgebench.data`, `edgebench.stream`). Continuous per-subject inertial streams (3-axis total acceleration, body acceleration and angular velocity at 50 Hz) reconstructed from the UCI HAR windows, replayed sample by sample on a simulated clock.
+2. **Device runtime and cloud service** (`edgebench.stream`, `edgebench.bench`). A device that buffers 2.56 s windows with 50% overlap and runs its architecture's on-device stage, a modelled uplink, and a cloud that receives payloads and produces decisions. The three architectures are configurations of this one pipeline, selected by name.
 3. **Privacy transformations** (`edgebench.privacy`). Five cumulative levels per architecture, applied to whatever leaves the device.
 4. **Models.** Cloud and on-device classifiers, plus an **adversary** that tries to re-identify the person from the payloads the cloud receives.
 5. **Measurement harness** (`edgebench.measure`). For every architecture × level: accuracy, latency, bandwidth, compute and an energy proxy, data exposure, and utility loss. Every number is written with its config and commit.
@@ -29,7 +31,7 @@ Levels are cumulative: each one keeps the previous transformations and adds one.
 | L1 | Minimise | drop total acceleration (gravity, so device orientation and posture) | drop gravity- and orientation-derived features | label only, no probabilities |
 | L2 | Coarsen | downsample to 25 Hz, 8-bit quantisation | 4-bit quantisation of each feature | label smoothed over the last 4 windows |
 | L3 | Perturb | additive Gaussian noise (σ as a share of each channel's spread; **no formal guarantee**) | clipping + Laplace noise: ε-local differential privacy per window | randomised response: ε-local differential privacy per label |
-| L4 | Aggregate | one payload per block of k windows (block mean signal) | one feature vector per block (block mean) | one activity histogram per block |
+| L4 | Aggregate | one payload per block of 8 windows: the block's middle window | one feature vector per block: the mean of the clean features, then L2–L3 once | one label per block: the majority label, then randomised response |
 
 At L4 the cloud assigns one decision to every window of a block, so per-window accuracy stays defined for every cell of the grid. Noise parameters for L3 are fixed in the config and swept separately in E3.
 
@@ -65,9 +67,9 @@ Defined formally in `docs/METRICS.md`.
 |---|---|---|
 | E1 | Frontier grid: 3 architectures × 5 levels, subject-grouped 5-fold CV × 3 seeds. Accuracy, exposure, bandwidth, compute and latency for every cell; Pareto set. | frontier table and charts |
 | E2 | Adversary strength: enrollment share 10–70% of each subject's data, two attacker model families. Is the exposure ranking stable? | ranking stability |
-| E3 | Local differential privacy sweep: ε from 0.1 to 10 for edge features and local labels. | accuracy–ε and exposure–ε curves |
-| E4 | Cost model: per-stage compute measured, bandwidth, latency and energy proxy under three link profiles, with the radio-energy constant swept over an order of magnitude. | break-even analysis |
-| E5 | Streaming replay of all 30 subjects through each architecture at L0 and L2; decisions compared with batch evaluation. | consistency report |
+| E3 | Local differential privacy sweep: ε from 0.1 to 64 for edge features and local labels (L3), subject-grouped 5-fold CV. | accuracy–ε and exposure–ε curves |
+| E4 | Cost model: per-stage compute measured, bandwidth, latency and energy proxy for two device and three link profiles, with the radio-energy constant swept from 0.01× to 10×. | break-even analysis |
+| E5 | Streaming replay of the 9 official test subjects (models trained on the other 21) through each architecture at L0, L2 and L4; decisions compared with batch evaluation. | consistency report |
 
 One command (`make benchmark`) runs E1–E5 and regenerates the report tables and figures. Configs are YAML with seeds; results go to `results/<exp>/<UTC time>-<commit>/`.
 
