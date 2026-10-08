@@ -43,7 +43,7 @@ test-ui: web ## Browser, keyboard and axe accessibility tests (needs Chromium)
 lint: ## Ruff, mypy, ESLint and TypeScript checks
 	uv run ruff check .
 	uv run ruff format --check .
-	uv run mypy src
+	uv run mypy src tests
 	npm --prefix web run lint
 	npm --prefix web run typecheck
 
