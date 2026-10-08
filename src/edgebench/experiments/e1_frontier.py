@@ -114,8 +114,10 @@ def summarise(s: Summary, folds: list[dict[str, Any]], official: list[dict[str, 
     n = cells[0]["subjects"]
     # "Transmit nothing" (predict the majority class, send nothing) takes part in the Pareto comparison,
     # so a cell that is both less accurate than it and no less exposing is not on the frontier.
+    # An adversary can always guess, so measured re-identification below chance is sampling noise:
+    # the comparison uses max(measured, chance).
     nothing = ("nothing", majority, 1 / n)
-    front = set(pareto([(r["cell"], r["accuracy"], r["exposure"]) for r in cells] + [nothing]))
+    front = set(pareto([(r["cell"], r["accuracy"], max(r["exposure"], 1 / n)) for r in cells] + [nothing]))
     for r in cells:
         r["pareto"] = r["cell"] in front
     s.tables.append(table("grid", "Every cell (accuracy: mean over subjects and seeds, 95% bootstrap CI over subjects; exposure: re-identification accuracy per payload, mean and range over seeds)",
