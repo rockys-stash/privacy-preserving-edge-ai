@@ -1,0 +1,1554 @@
+{
+ "title": "E4 Cost",
+ "question": "What does each cell cost in bandwidth, computation, latency and energy, and when is fully local cheapest?",
+ "findings": [
+  "Fully local is not cheapest on energy for: microcontroller over wifi (at some radio factors)."
+ ],
+ "tables": [
+  {
+   "id": "measured",
+   "caption": "Per window: bytes on the wire, operations (analytic) and single-window wall time (measured here)",
+   "columns": [
+    {
+     "key": "cell",
+     "label": "Cell",
+     "align": "l"
+    },
+    {
+     "key": "bytes_per_window",
+     "label": "Bytes / window",
+     "align": "r"
+    },
+    {
+     "key": "zlib_bytes_per_window",
+     "label": "zlib bytes / window",
+     "align": "r"
+    },
+    {
+     "key": "uplink_bps",
+     "label": "Uplink bit/s",
+     "align": "r"
+    },
+    {
+     "key": "device_ops",
+     "label": "Device ops",
+     "align": "r"
+    },
+    {
+     "key": "cloud_ops",
+     "label": "Cloud ops",
+     "align": "r"
+    },
+    {
+     "key": "device_ms_measured",
+     "label": "Device ms (here)",
+     "align": "r"
+    },
+    {
+     "key": "cloud_ms_measured",
+     "label": "Cloud ms (here)",
+     "align": "r"
+    },
+    {
+     "key": "block_wait_s",
+     "label": "Block wait s",
+     "align": "r"
+    }
+   ],
+   "rows": [
+    {
+     "cell": "centralized/L0",
+     "arch": "centralized",
+     "level": 0,
+     "bytes_per_payload": 4608,
+     "bytes_per_window": 4608.0,
+     "zlib_bytes_per_window": 2386.84875,
+     "uplink_bps": 28800.0,
+     "device_ops": 0.0,
+     "cloud_ops": 3413632.0,
+     "device_ms_measured": 0.0033465000797150424,
+     "cloud_ms_measured": 39.123782499927984,
+     "model_bytes_on_device": 0,
+     "block_wait_s": 0.0
+    },
+    {
+     "cell": "centralized/L1",
+     "arch": "centralized",
+     "level": 1,
+     "bytes_per_payload": 3072,
+     "bytes_per_window": 3072.0,
+     "zlib_bytes_per_window": 1592.469375,
+     "uplink_bps": 19200.0,
+     "device_ops": 0.0,
+     "cloud_ops": 2752856.0,
+     "device_ms_measured": 0.007842000059099519,
+     "cloud_ms_measured": 34.428931999855195,
+     "model_bytes_on_device": 0,
+     "block_wait_s": 0.0
+    },
+    {
+     "cell": "centralized/L2",
+     "arch": "centralized",
+     "level": 2,
+     "bytes_per_payload": 384,
+     "bytes_per_window": 384.0,
+     "zlib_bytes_per_window": 160.551875,
+     "uplink_bps": 2400.0,
+     "device_ops": 1920.0,
+     "cloud_ops": 1341996.0,
+     "device_ms_measured": 0.03497750003589317,
+     "cloud_ms_measured": 32.49334100019041,
+     "model_bytes_on_device": 0,
+     "block_wait_s": 0.0
+    },
+    {
+     "cell": "centralized/L3",
+     "arch": "centralized",
+     "level": 3,
+     "bytes_per_payload": 384,
+     "bytes_per_window": 384.0,
+     "zlib_bytes_per_window": 336.743125,
+     "uplink_bps": 2400.0,
+     "device_ops": 3072.0,
+     "cloud_ops": 1341996.0,
+     "device_ms_measured": 0.05134799994266359,
+     "cloud_ms_measured": 34.44721499977277,
+     "model_bytes_on_device": 0,
+     "block_wait_s": 0.0
+    },
+    {
+     "cell": "centralized/L4",
+     "arch": "centralized",
+     "level": 4,
+     "bytes_per_payload": 384,
+     "bytes_per_window": 59.76,
+     "zlib_bytes_per_window": 52.964375,
+     "uplink_bps": 373.5,
+     "device_ops": 384.0,
+     "cloud_ops": 167749.5,
+     "device_ms_measured": 0.04681700011133216,
+     "cloud_ms_measured": 34.306773999787765,
+     "model_bytes_on_device": 0,
+     "block_wait_s": 4.48
+    },
+    {
+     "cell": "edge/L0",
+     "arch": "edge",
+     "level": 0,
+     "bytes_per_payload": 660,
+     "bytes_per_window": 660.0,
+     "zlib_bytes_per_window": 574.578125,
+     "uplink_bps": 4125.0,
+     "device_ops": 48768.0,
+     "cloud_ops": 5338.0,
+     "device_ms_measured": 0.39070550019459915,
+     "cloud_ms_measured": 3.710075500066523,
+     "model_bytes_on_device": 0,
+     "block_wait_s": 0.0
+    },
+    {
+     "cell": "edge/L1",
+     "arch": "edge",
+     "level": 1,
+     "bytes_per_payload": 440,
+     "bytes_per_window": 440.0,
+     "zlib_bytes_per_window": 383.754375,
+     "uplink_bps": 2750.0,
+     "device_ops": 32512.0,
+     "cloud_ops": 6132.0,
+     "device_ms_measured": 0.3995449999365519,
+     "cloud_ms_measured": 3.880074500102637,
+     "model_bytes_on_device": 0,
+     "block_wait_s": 0.0
+    },
+    {
+     "cell": "edge/L2",
+     "arch": "edge",
+     "level": 2,
+     "bytes_per_payload": 55,
+     "bytes_per_window": 55.0,
+     "zlib_bytes_per_window": 47.075625,
+     "uplink_bps": 343.75,
+     "device_ops": 32842.0,
+     "cloud_ops": 6349.0,
+     "device_ms_measured": 0.4294249999929889,
+     "cloud_ms_measured": 3.785232499922131,
+     "model_bytes_on_device": 0,
+     "block_wait_s": 0.0
+    },
+    {
+     "cell": "edge/L3",
+     "arch": "edge",
+     "level": 3,
+     "bytes_per_payload": 220,
+     "bytes_per_window": 220.0,
+     "zlib_bytes_per_window": 209.850625,
+     "uplink_bps": 1375.0,
+     "device_ops": 33172.0,
+     "cloud_ops": 6571.0,
+     "device_ms_measured": 0.4922945001908374,
+     "cloud_ms_measured": 4.002324000111912,
+     "model_bytes_on_device": 0,
+     "block_wait_s": 0.0
+    },
+    {
+     "cell": "edge/L4",
+     "arch": "edge",
+     "level": 4,
+     "bytes_per_payload": 220,
+     "bytes_per_window": 34.2375,
+     "zlib_bytes_per_window": 32.69375,
+     "uplink_bps": 213.98437499999997,
+     "device_ops": 32704.5,
+     "cloud_ops": 931.1249999999999,
+     "device_ms_measured": 0.4405695001423737,
+     "cloud_ms_measured": 3.810526999814101,
+     "model_bytes_on_device": 0,
+     "block_wait_s": 4.48
+    },
+    {
+     "cell": "local/L0",
+     "arch": "local",
+     "level": 0,
+     "bytes_per_payload": 25,
+     "bytes_per_window": 25.0,
+     "zlib_bytes_per_window": 23.235,
+     "uplink_bps": 156.25,
+     "device_ops": 50766.0,
+     "cloud_ops": 0.0,
+     "device_ms_measured": 0.6132910000360425,
+     "cloud_ms_measured": 0.0,
+     "model_bytes_on_device": 2316,
+     "block_wait_s": 0.0
+    },
+    {
+     "cell": "local/L1",
+     "arch": "local",
+     "level": 1,
+     "bytes_per_payload": 1,
+     "bytes_per_window": 1.0,
+     "zlib_bytes_per_window": 0.129375,
+     "uplink_bps": 6.25,
+     "device_ops": 50766.0,
+     "cloud_ops": 0.0,
+     "device_ms_measured": 0.6145305001155066,
+     "cloud_ms_measured": 0.0,
+     "model_bytes_on_device": 2316,
+     "block_wait_s": 0.0
+    },
+    {
+     "cell": "local/L2",
+     "arch": "local",
+     "level": 2,
+     "bytes_per_payload": 1,
+     "bytes_per_window": 1.0,
+     "zlib_bytes_per_window": 0.109375,
+     "uplink_bps": 6.25,
+     "device_ops": 50774.0,
+     "cloud_ops": 0.0,
+     "device_ms_measured": 0.5851089997577219,
+     "cloud_ms_measured": 0.0,
+     "model_bytes_on_device": 2316,
+     "block_wait_s": 0.0
+    },
+    {
+     "cell": "local/L3",
+     "arch": "local",
+     "level": 3,
+     "bytes_per_payload": 1,
+     "bytes_per_window": 1.0,
+     "zlib_bytes_per_window": 0.21625,
+     "uplink_bps": 6.25,
+     "device_ops": 50778.0,
+     "cloud_ops": 0.0,
+     "device_ms_measured": 0.617348500099979,
+     "cloud_ms_measured": 0.0,
+     "model_bytes_on_device": 2316,
+     "block_wait_s": 0.0
+    },
+    {
+     "cell": "local/L4",
+     "arch": "local",
+     "level": 4,
+     "bytes_per_payload": 1,
+     "bytes_per_window": 0.155625,
+     "zlib_bytes_per_window": 0.05875,
+     "uplink_bps": 0.9726562500000001,
+     "device_ops": 50778.0,
+     "cloud_ops": 0.0,
+     "device_ms_measured": 0.5828415000905807,
+     "cloud_ms_measured": 0.0,
+     "model_bytes_on_device": 2316,
+     "block_wait_s": 4.48
+    }
+   ]
+  },
+  {
+   "id": "modelled",
+   "caption": "Modelled latency (window closes -> decision at the cloud) and device energy proxy per window",
+   "columns": [
+    {
+     "key": "cell",
+     "label": "Cell",
+     "align": "l"
+    },
+    {
+     "key": "device",
+     "label": "Device",
+     "align": "l"
+    },
+    {
+     "key": "link",
+     "label": "Link",
+     "align": "l"
+    },
+    {
+     "key": "latency_s",
+     "label": "Latency s",
+     "align": "r"
+    },
+    {
+     "key": "energy_uj",
+     "label": "Energy proxy uJ",
+     "align": "r"
+    }
+   ],
+   "rows": [
+    {
+     "cell": "centralized/L0",
+     "arch": "centralized",
+     "level": 0,
+     "device": "microcontroller",
+     "link": "ble",
+     "latency_s": 0.253443782499928,
+     "energy_uj": 921.5999999999999
+    },
+    {
+     "cell": "centralized/L1",
+     "arch": "centralized",
+     "level": 1,
+     "device": "microcontroller",
+     "link": "ble",
+     "latency_s": 0.1873089319998552,
+     "energy_uj": 614.4
+    },
+    {
+     "cell": "centralized/L2",
+     "arch": "centralized",
+     "level": 2,
+     "device": "microcontroller",
+     "link": "ble",
+     "latency_s": 0.0778725410001904,
+     "energy_uj": 76.992
+    },
+    {
+     "cell": "centralized/L3",
+     "arch": "centralized",
+     "level": 3,
+     "device": "microcontroller",
+     "link": "ble",
+     "latency_s": 0.07983793499977276,
+     "energy_uj": 77.10719999999999
+    },
+    {
+     "cell": "centralized/L4",
+     "arch": "centralized",
+     "level": 4,
+     "device": "microcontroller",
+     "link": "ble",
+     "latency_s": 4.5596706139997885,
+     "energy_uj": 11.990399999999998
+    },
+    {
+     "cell": "edge/L0",
+     "arch": "edge",
+     "level": 0,
+     "device": "microcontroller",
+     "link": "ble",
+     "latency_s": 0.06059775550006652,
+     "energy_uj": 136.87679999999997
+    },
+    {
+     "cell": "edge/L1",
+     "arch": "edge",
+     "level": 1,
+     "device": "microcontroller",
+     "link": "ble",
+     "latency_s": 0.05180519450010264,
+     "energy_uj": 91.2512
+    },
+    {
+     "cell": "edge/L2",
+     "arch": "edge",
+     "level": 2,
+     "device": "microcontroller",
+     "link": "ble",
+     "latency_s": 0.03631365249992213,
+     "energy_uj": 14.2842
+    },
+    {
+     "cell": "edge/L3",
+     "arch": "edge",
+     "level": 3,
+     "device": "microcontroller",
+     "link": "ble",
+     "latency_s": 0.043134044000111914,
+     "energy_uj": 47.3172
+    },
+    {
+     "cell": "edge/L4",
+     "arch": "edge",
+     "level": 4,
+     "device": "microcontroller",
+     "link": "ble",
+     "latency_s": 4.522937571999814,
+     "energy_uj": 10.11795
+    },
+    {
+     "cell": "local/L0",
+     "arch": "local",
+     "level": 0,
+     "device": "microcontroller",
+     "link": "ble",
+     "latency_s": 0.03150766,
+     "energy_uj": 10.0766
+    },
+    {
+     "cell": "local/L1",
+     "arch": "local",
+     "level": 1,
+     "device": "microcontroller",
+     "link": "ble",
+     "latency_s": 0.030547659999999997,
+     "energy_uj": 5.276599999999999
+    },
+    {
+     "cell": "local/L2",
+     "arch": "local",
+     "level": 2,
+     "device": "microcontroller",
+     "link": "ble",
+     "latency_s": 0.030547739999999997,
+     "energy_uj": 5.2774
+    },
+    {
+     "cell": "local/L3",
+     "arch": "local",
+     "level": 3,
+     "device": "microcontroller",
+     "link": "ble",
+     "latency_s": 0.030547779999999997,
+     "energy_uj": 5.2778
+    },
+    {
+     "cell": "local/L4",
+     "arch": "local",
+     "level": 4,
+     "device": "microcontroller",
+     "link": "ble",
+     "latency_s": 4.5105477800000005,
+     "energy_uj": 5.108924999999999
+    },
+    {
+     "cell": "centralized/L0",
+     "arch": "centralized",
+     "level": 0,
+     "device": "microcontroller",
+     "link": "wifi",
+     "latency_s": 0.052810182499927985,
+     "energy_uj": 230.39999999999998
+    },
+    {
+     "cell": "centralized/L1",
+     "arch": "centralized",
+     "level": 1,
+     "device": "microcontroller",
+     "link": "wifi",
+     "latency_s": 0.046886531999855194,
+     "energy_uj": 153.6
+    },
+    {
+     "cell": "centralized/L2",
+     "arch": "centralized",
+     "level": 2,
+     "device": "microcontroller",
+     "link": "wifi",
+     "latency_s": 0.04281974100019041,
+     "energy_uj": 19.392
+    },
+    {
+     "cell": "centralized/L3",
+     "arch": "centralized",
+     "level": 3,
+     "device": "microcontroller",
+     "link": "wifi",
+     "latency_s": 0.04478513499977277,
+     "energy_uj": 19.507199999999997
+    },
+    {
+     "cell": "centralized/L4",
+     "arch": "centralized",
+     "level": 4,
+     "device": "microcontroller",
+     "link": "wifi",
+     "latency_s": 4.524617813999789,
+     "energy_uj": 3.0263999999999993
+    },
+    {
+     "cell": "edge/L0",
+     "arch": "edge",
+     "level": 0,
+     "device": "microcontroller",
+     "link": "wifi",
+     "latency_s": 0.014725755500066525,
+     "energy_uj": 37.876799999999996
+    },
+    {
+     "cell": "edge/L1",
+     "arch": "edge",
+     "level": 1,
+     "device": "microcontroller",
+     "link": "wifi",
+     "latency_s": 0.014557194500102637,
+     "energy_uj": 25.2512
+    },
+    {
+     "cell": "edge/L2",
+     "arch": "edge",
+     "level": 2,
+     "device": "microcontroller",
+     "link": "wifi",
+     "latency_s": 0.014157652499922131,
+     "energy_uj": 6.0342
+    },
+    {
+     "cell": "edge/L3",
+     "arch": "edge",
+     "level": 3,
+     "device": "microcontroller",
+     "link": "wifi",
+     "latency_s": 0.014510044000111914,
+     "energy_uj": 14.3172
+    },
+    {
+     "cell": "edge/L4",
+     "arch": "edge",
+     "level": 4,
+     "device": "microcontroller",
+     "link": "wifi",
+     "latency_s": 4.494313571999815,
+     "energy_uj": 4.9823249999999994
+    },
+    {
+     "cell": "local/L0",
+     "arch": "local",
+     "level": 0,
+     "device": "microcontroller",
+     "link": "wifi",
+     "latency_s": 0.01052766,
+     "energy_uj": 6.3266
+    },
+    {
+     "cell": "local/L1",
+     "arch": "local",
+     "level": 1,
+     "device": "microcontroller",
+     "link": "wifi",
+     "latency_s": 0.01050846,
+     "energy_uj": 5.1266
+    },
+    {
+     "cell": "local/L2",
+     "arch": "local",
+     "level": 2,
+     "device": "microcontroller",
+     "link": "wifi",
+     "latency_s": 0.01050854,
+     "energy_uj": 5.127400000000001
+    },
+    {
+     "cell": "local/L3",
+     "arch": "local",
+     "level": 3,
+     "device": "microcontroller",
+     "link": "wifi",
+     "latency_s": 0.01050858,
+     "energy_uj": 5.127800000000001
+    },
+    {
+     "cell": "local/L4",
+     "arch": "local",
+     "level": 4,
+     "device": "microcontroller",
+     "link": "wifi",
+     "latency_s": 4.49050858,
+     "energy_uj": 5.08558125
+    },
+    {
+     "cell": "centralized/L0",
+     "arch": "centralized",
+     "level": 0,
+     "device": "microcontroller",
+     "link": "cellular",
+     "latency_s": 0.135987782499928,
+     "energy_uj": 4608.0
+    },
+    {
+     "cell": "centralized/L1",
+     "arch": "centralized",
+     "level": 1,
+     "device": "microcontroller",
+     "link": "cellular",
+     "latency_s": 0.11900493199985519,
+     "energy_uj": 3072.0
+    },
+    {
+     "cell": "centralized/L2",
+     "arch": "centralized",
+     "level": 2,
+     "device": "microcontroller",
+     "link": "cellular",
+     "latency_s": 0.09558454100019041,
+     "energy_uj": 384.192
+    },
+    {
+     "cell": "centralized/L3",
+     "arch": "centralized",
+     "level": 3,
+     "device": "microcontroller",
+     "link": "cellular",
+     "latency_s": 0.09754993499977277,
+     "energy_uj": 384.3072
+    },
+    {
+     "cell": "centralized/L4",
+     "arch": "centralized",
+     "level": 4,
+     "device": "microcontroller",
+     "link": "cellular",
+     "latency_s": 4.577382613999788,
+     "energy_uj": 59.7984
+    },
+    {
+     "cell": "edge/L0",
+     "arch": "edge",
+     "level": 0,
+     "device": "microcontroller",
+     "link": "cellular",
+     "latency_s": 0.06947775550006653,
+     "energy_uj": 664.8768
+    },
+    {
+     "cell": "edge/L1",
+     "arch": "edge",
+     "level": 1,
+     "device": "microcontroller",
+     "link": "cellular",
+     "latency_s": 0.06772519450010263,
+     "energy_uj": 443.2511999999999
+    },
+    {
+     "cell": "edge/L2",
+     "arch": "edge",
+     "level": 2,
+     "device": "microcontroller",
+     "link": "cellular",
+     "latency_s": 0.06455365249992213,
+     "energy_uj": 58.28419999999999
+    },
+    {
+     "cell": "edge/L3",
+     "arch": "edge",
+     "level": 3,
+     "device": "microcontroller",
+     "link": "cellular",
+     "latency_s": 0.0660940440001119,
+     "energy_uj": 223.31719999999999
+    },
+    {
+     "cell": "edge/L4",
+     "arch": "edge",
+     "level": 4,
+     "device": "microcontroller",
+     "link": "cellular",
+     "latency_s": 4.545897571999815,
+     "energy_uj": 37.507949999999994
+    },
+    {
+     "cell": "local/L0",
+     "arch": "local",
+     "level": 0,
+     "device": "microcontroller",
+     "link": "cellular",
+     "latency_s": 0.06070766,
+     "energy_uj": 30.076599999999996
+    },
+    {
+     "cell": "local/L1",
+     "arch": "local",
+     "level": 1,
+     "device": "microcontroller",
+     "link": "cellular",
+     "latency_s": 0.06051566,
+     "energy_uj": 6.076599999999999
+    },
+    {
+     "cell": "local/L2",
+     "arch": "local",
+     "level": 2,
+     "device": "microcontroller",
+     "link": "cellular",
+     "latency_s": 0.06051574,
+     "energy_uj": 6.0774
+    },
+    {
+     "cell": "local/L3",
+     "arch": "local",
+     "level": 3,
+     "device": "microcontroller",
+     "link": "cellular",
+     "latency_s": 0.06051578,
+     "energy_uj": 6.0778
+    },
+    {
+     "cell": "local/L4",
+     "arch": "local",
+     "level": 4,
+     "device": "microcontroller",
+     "link": "cellular",
+     "latency_s": 4.540515780000001,
+     "energy_uj": 5.2334249999999995
+    },
+    {
+     "cell": "centralized/L0",
+     "arch": "centralized",
+     "level": 0,
+     "device": "phone",
+     "link": "ble",
+     "latency_s": 0.253443782499928,
+     "energy_uj": 921.5999999999999
+    },
+    {
+     "cell": "centralized/L1",
+     "arch": "centralized",
+     "level": 1,
+     "device": "phone",
+     "link": "ble",
+     "latency_s": 0.1873089319998552,
+     "energy_uj": 614.4
+    },
+    {
+     "cell": "centralized/L2",
+     "arch": "centralized",
+     "level": 2,
+     "device": "phone",
+     "link": "ble",
+     "latency_s": 0.0778535330001904,
+     "energy_uj": 76.8192
+    },
+    {
+     "cell": "centralized/L3",
+     "arch": "centralized",
+     "level": 3,
+     "device": "phone",
+     "link": "ble",
+     "latency_s": 0.07980752219977277,
+     "energy_uj": 76.83071999999999
+    },
+    {
+     "cell": "centralized/L4",
+     "arch": "centralized",
+     "level": 4,
+     "device": "phone",
+     "link": "ble",
+     "latency_s": 4.559666812399788,
+     "energy_uj": 11.955839999999998
+    },
+    {
+     "cell": "edge/L0",
+     "arch": "edge",
+     "level": 0,
+     "device": "phone",
+     "link": "ble",
+     "latency_s": 0.06011495230006652,
+     "energy_uj": 132.48767999999998
+    },
+    {
+     "cell": "edge/L1",
+     "arch": "edge",
+     "level": 1,
+     "device": "phone",
+     "link": "ble",
+     "latency_s": 0.05148332570010264,
+     "energy_uj": 88.32512
+    },
+    {
+     "cell": "edge/L2",
+     "arch": "edge",
+     "level": 2,
+     "device": "phone",
+     "link": "ble",
+     "latency_s": 0.03598851669992213,
+     "energy_uj": 11.32842
+    },
+    {
+     "cell": "edge/L3",
+     "arch": "edge",
+     "level": 3,
+     "device": "phone",
+     "link": "ble",
+     "latency_s": 0.04280564120011191,
+     "energy_uj": 44.33172
+    },
+    {
+     "cell": "edge/L4",
+     "arch": "edge",
+     "level": 4,
+     "device": "phone",
+     "link": "ble",
+     "latency_s": 4.522613797449814,
+     "energy_uj": 7.174544999999999
+    },
+    {
+     "cell": "local/L0",
+     "arch": "local",
+     "level": 0,
+     "device": "phone",
+     "link": "ble",
+     "latency_s": 0.0310050766,
+     "energy_uj": 5.50766
+    },
+    {
+     "cell": "local/L1",
+     "arch": "local",
+     "level": 1,
+     "device": "phone",
+     "link": "ble",
+     "latency_s": 0.030045076599999998,
+     "energy_uj": 0.70766
+    },
+    {
+     "cell": "local/L2",
+     "arch": "local",
+     "level": 2,
+     "device": "phone",
+     "link": "ble",
+     "latency_s": 0.0300450774,
+     "energy_uj": 0.7077399999999999
+    },
+    {
+     "cell": "local/L3",
+     "arch": "local",
+     "level": 3,
+     "device": "phone",
+     "link": "ble",
+     "latency_s": 0.030045077799999997,
+     "energy_uj": 0.70778
+    },
+    {
+     "cell": "local/L4",
+     "arch": "local",
+     "level": 4,
+     "device": "phone",
+     "link": "ble",
+     "latency_s": 4.5100450778,
+     "energy_uj": 0.538905
+    },
+    {
+     "cell": "centralized/L0",
+     "arch": "centralized",
+     "level": 0,
+     "device": "phone",
+     "link": "wifi",
+     "latency_s": 0.052810182499927985,
+     "energy_uj": 230.39999999999998
+    },
+    {
+     "cell": "centralized/L1",
+     "arch": "centralized",
+     "level": 1,
+     "device": "phone",
+     "link": "wifi",
+     "latency_s": 0.046886531999855194,
+     "energy_uj": 153.6
+    },
+    {
+     "cell": "centralized/L2",
+     "arch": "centralized",
+     "level": 2,
+     "device": "phone",
+     "link": "wifi",
+     "latency_s": 0.04280073300019041,
+     "energy_uj": 19.2192
+    },
+    {
+     "cell": "centralized/L3",
+     "arch": "centralized",
+     "level": 3,
+     "device": "phone",
+     "link": "wifi",
+     "latency_s": 0.04475472219977277,
+     "energy_uj": 19.23072
+    },
+    {
+     "cell": "centralized/L4",
+     "arch": "centralized",
+     "level": 4,
+     "device": "phone",
+     "link": "wifi",
+     "latency_s": 4.524614012399788,
+     "energy_uj": 2.99184
+    },
+    {
+     "cell": "edge/L0",
+     "arch": "edge",
+     "level": 0,
+     "device": "phone",
+     "link": "wifi",
+     "latency_s": 0.014242952300066523,
+     "energy_uj": 33.48767999999999
+    },
+    {
+     "cell": "edge/L1",
+     "arch": "edge",
+     "level": 1,
+     "device": "phone",
+     "link": "wifi",
+     "latency_s": 0.014235325700102637,
+     "energy_uj": 22.32512
+    },
+    {
+     "cell": "edge/L2",
+     "arch": "edge",
+     "level": 2,
+     "device": "phone",
+     "link": "wifi",
+     "latency_s": 0.013832516699922132,
+     "energy_uj": 3.07842
+    },
+    {
+     "cell": "edge/L3",
+     "arch": "edge",
+     "level": 3,
+     "device": "phone",
+     "link": "wifi",
+     "latency_s": 0.014181641200111913,
+     "energy_uj": 11.33172
+    },
+    {
+     "cell": "edge/L4",
+     "arch": "edge",
+     "level": 4,
+     "device": "phone",
+     "link": "wifi",
+     "latency_s": 4.493989797449815,
+     "energy_uj": 2.0389199999999996
+    },
+    {
+     "cell": "local/L0",
+     "arch": "local",
+     "level": 0,
+     "device": "phone",
+     "link": "wifi",
+     "latency_s": 0.0100250766,
+     "energy_uj": 1.7576599999999998
+    },
+    {
+     "cell": "local/L1",
+     "arch": "local",
+     "level": 1,
+     "device": "phone",
+     "link": "wifi",
+     "latency_s": 0.010005876600000001,
+     "energy_uj": 0.5576599999999999
+    },
+    {
+     "cell": "local/L2",
+     "arch": "local",
+     "level": 2,
+     "device": "phone",
+     "link": "wifi",
+     "latency_s": 0.0100058774,
+     "energy_uj": 0.55774
+    },
+    {
+     "cell": "local/L3",
+     "arch": "local",
+     "level": 3,
+     "device": "phone",
+     "link": "wifi",
+     "latency_s": 0.0100058778,
+     "energy_uj": 0.55778
+    },
+    {
+     "cell": "local/L4",
+     "arch": "local",
+     "level": 4,
+     "device": "phone",
+     "link": "wifi",
+     "latency_s": 4.490005877800001,
+     "energy_uj": 0.5155612500000001
+    },
+    {
+     "cell": "centralized/L0",
+     "arch": "centralized",
+     "level": 0,
+     "device": "phone",
+     "link": "cellular",
+     "latency_s": 0.135987782499928,
+     "energy_uj": 4608.0
+    },
+    {
+     "cell": "centralized/L1",
+     "arch": "centralized",
+     "level": 1,
+     "device": "phone",
+     "link": "cellular",
+     "latency_s": 0.11900493199985519,
+     "energy_uj": 3072.0
+    },
+    {
+     "cell": "centralized/L2",
+     "arch": "centralized",
+     "level": 2,
+     "device": "phone",
+     "link": "cellular",
+     "latency_s": 0.09556553300019041,
+     "energy_uj": 384.0192
+    },
+    {
+     "cell": "centralized/L3",
+     "arch": "centralized",
+     "level": 3,
+     "device": "phone",
+     "link": "cellular",
+     "latency_s": 0.09751952219977277,
+     "energy_uj": 384.03072
+    },
+    {
+     "cell": "centralized/L4",
+     "arch": "centralized",
+     "level": 4,
+     "device": "phone",
+     "link": "cellular",
+     "latency_s": 4.577378812399788,
+     "energy_uj": 59.763839999999995
+    },
+    {
+     "cell": "edge/L0",
+     "arch": "edge",
+     "level": 0,
+     "device": "phone",
+     "link": "cellular",
+     "latency_s": 0.06899495230006653,
+     "energy_uj": 660.48768
+    },
+    {
+     "cell": "edge/L1",
+     "arch": "edge",
+     "level": 1,
+     "device": "phone",
+     "link": "cellular",
+     "latency_s": 0.06740332570010263,
+     "energy_uj": 440.3251199999999
+    },
+    {
+     "cell": "edge/L2",
+     "arch": "edge",
+     "level": 2,
+     "device": "phone",
+     "link": "cellular",
+     "latency_s": 0.06422851669992213,
+     "energy_uj": 55.32842
+    },
+    {
+     "cell": "edge/L3",
+     "arch": "edge",
+     "level": 3,
+     "device": "phone",
+     "link": "cellular",
+     "latency_s": 0.06576564120011191,
+     "energy_uj": 220.33172
+    },
+    {
+     "cell": "edge/L4",
+     "arch": "edge",
+     "level": 4,
+     "device": "phone",
+     "link": "cellular",
+     "latency_s": 4.545573797449815,
+     "energy_uj": 34.564545
+    },
+    {
+     "cell": "local/L0",
+     "arch": "local",
+     "level": 0,
+     "device": "phone",
+     "link": "cellular",
+     "latency_s": 0.0602050766,
+     "energy_uj": 25.507659999999998
+    },
+    {
+     "cell": "local/L1",
+     "arch": "local",
+     "level": 1,
+     "device": "phone",
+     "link": "cellular",
+     "latency_s": 0.0600130766,
+     "energy_uj": 1.50766
+    },
+    {
+     "cell": "local/L2",
+     "arch": "local",
+     "level": 2,
+     "device": "phone",
+     "link": "cellular",
+     "latency_s": 0.060013077399999996,
+     "energy_uj": 1.5077399999999999
+    },
+    {
+     "cell": "local/L3",
+     "arch": "local",
+     "level": 3,
+     "device": "phone",
+     "link": "cellular",
+     "latency_s": 0.0600130778,
+     "energy_uj": 1.5077800000000001
+    },
+    {
+     "cell": "local/L4",
+     "arch": "local",
+     "level": 4,
+     "device": "phone",
+     "link": "cellular",
+     "latency_s": 4.5400130778,
+     "energy_uj": 0.663405
+    }
+   ]
+  },
+  {
+   "id": "breakeven",
+   "caption": "Cheapest L0 architecture on device energy as radio energy per byte is scaled",
+   "columns": [
+    {
+     "key": "device",
+     "label": "Device",
+     "align": "l"
+    },
+    {
+     "key": "link",
+     "label": "Link",
+     "align": "l"
+    },
+    {
+     "key": "radio_factor",
+     "label": "Radio x",
+     "align": "r"
+    },
+    {
+     "key": "centralized_uj",
+     "label": "Centralized uJ",
+     "align": "r"
+    },
+    {
+     "key": "edge_uj",
+     "label": "Edge uJ",
+     "align": "r"
+    },
+    {
+     "key": "local_uj",
+     "label": "Local uJ",
+     "align": "r"
+    },
+    {
+     "key": "cheapest",
+     "label": "Cheapest",
+     "align": "l"
+    }
+   ],
+   "rows": [
+    {
+     "device": "microcontroller",
+     "link": "ble",
+     "radio_factor": 0.01,
+     "centralized_uj": 9.216000000000001,
+     "edge_uj": 6.1968000000000005,
+     "local_uj": 5.1266,
+     "cheapest": "local"
+    },
+    {
+     "device": "microcontroller",
+     "link": "ble",
+     "radio_factor": 0.03,
+     "centralized_uj": 27.647999999999996,
+     "edge_uj": 8.8368,
+     "local_uj": 5.2266,
+     "cheapest": "local"
+    },
+    {
+     "device": "microcontroller",
+     "link": "ble",
+     "radio_factor": 0.1,
+     "centralized_uj": 92.16,
+     "edge_uj": 18.076800000000002,
+     "local_uj": 5.5766,
+     "cheapest": "local"
+    },
+    {
+     "device": "microcontroller",
+     "link": "ble",
+     "radio_factor": 0.3,
+     "centralized_uj": 276.47999999999996,
+     "edge_uj": 44.4768,
+     "local_uj": 6.5766,
+     "cheapest": "local"
+    },
+    {
+     "device": "microcontroller",
+     "link": "ble",
+     "radio_factor": 1,
+     "centralized_uj": 921.5999999999999,
+     "edge_uj": 136.87679999999997,
+     "local_uj": 10.0766,
+     "cheapest": "local"
+    },
+    {
+     "device": "microcontroller",
+     "link": "ble",
+     "radio_factor": 3,
+     "centralized_uj": 2764.8,
+     "edge_uj": 400.8768,
+     "local_uj": 20.076599999999996,
+     "cheapest": "local"
+    },
+    {
+     "device": "microcontroller",
+     "link": "ble",
+     "radio_factor": 10,
+     "centralized_uj": 9216.0,
+     "edge_uj": 1324.8768,
+     "local_uj": 55.07659999999999,
+     "cheapest": "local"
+    },
+    {
+     "device": "microcontroller",
+     "link": "wifi",
+     "radio_factor": 0.01,
+     "centralized_uj": 2.3040000000000003,
+     "edge_uj": 5.2068,
+     "local_uj": 5.0891,
+     "cheapest": "centralized"
+    },
+    {
+     "device": "microcontroller",
+     "link": "wifi",
+     "radio_factor": 0.03,
+     "centralized_uj": 6.911999999999999,
+     "edge_uj": 5.8668000000000005,
+     "local_uj": 5.1141,
+     "cheapest": "local"
+    },
+    {
+     "device": "microcontroller",
+     "link": "wifi",
+     "radio_factor": 0.1,
+     "centralized_uj": 23.04,
+     "edge_uj": 8.176800000000002,
+     "local_uj": 5.201599999999999,
+     "cheapest": "local"
+    },
+    {
+     "device": "microcontroller",
+     "link": "wifi",
+     "radio_factor": 0.3,
+     "centralized_uj": 69.11999999999999,
+     "edge_uj": 14.7768,
+     "local_uj": 5.4516,
+     "cheapest": "local"
+    },
+    {
+     "device": "microcontroller",
+     "link": "wifi",
+     "radio_factor": 1,
+     "centralized_uj": 230.39999999999998,
+     "edge_uj": 37.876799999999996,
+     "local_uj": 6.3266,
+     "cheapest": "local"
+    },
+    {
+     "device": "microcontroller",
+     "link": "wifi",
+     "radio_factor": 3,
+     "centralized_uj": 691.2,
+     "edge_uj": 103.87679999999999,
+     "local_uj": 8.8266,
+     "cheapest": "local"
+    },
+    {
+     "device": "microcontroller",
+     "link": "wifi",
+     "radio_factor": 10,
+     "centralized_uj": 2304.0,
+     "edge_uj": 334.8768,
+     "local_uj": 17.576599999999996,
+     "cheapest": "local"
+    },
+    {
+     "device": "microcontroller",
+     "link": "cellular",
+     "radio_factor": 0.01,
+     "centralized_uj": 46.08,
+     "edge_uj": 11.4768,
+     "local_uj": 5.3266,
+     "cheapest": "local"
+    },
+    {
+     "device": "microcontroller",
+     "link": "cellular",
+     "radio_factor": 0.03,
+     "centralized_uj": 138.23999999999998,
+     "edge_uj": 24.676799999999997,
+     "local_uj": 5.826599999999999,
+     "cheapest": "local"
+    },
+    {
+     "device": "microcontroller",
+     "link": "cellular",
+     "radio_factor": 0.1,
+     "centralized_uj": 460.79999999999995,
+     "edge_uj": 70.87679999999999,
+     "local_uj": 7.5766,
+     "cheapest": "local"
+    },
+    {
+     "device": "microcontroller",
+     "link": "cellular",
+     "radio_factor": 0.3,
+     "centralized_uj": 1382.4,
+     "edge_uj": 202.8768,
+     "local_uj": 12.5766,
+     "cheapest": "local"
+    },
+    {
+     "device": "microcontroller",
+     "link": "cellular",
+     "radio_factor": 1,
+     "centralized_uj": 4608.0,
+     "edge_uj": 664.8768,
+     "local_uj": 30.076599999999996,
+     "cheapest": "local"
+    },
+    {
+     "device": "microcontroller",
+     "link": "cellular",
+     "radio_factor": 3,
+     "centralized_uj": 13824.0,
+     "edge_uj": 1984.8767999999998,
+     "local_uj": 80.07660000000001,
+     "cheapest": "local"
+    },
+    {
+     "device": "microcontroller",
+     "link": "cellular",
+     "radio_factor": 10,
+     "centralized_uj": 46079.99999999999,
+     "edge_uj": 6604.876799999999,
+     "local_uj": 255.0766,
+     "cheapest": "local"
+    },
+    {
+     "device": "phone",
+     "link": "ble",
+     "radio_factor": 0.01,
+     "centralized_uj": 9.216000000000001,
+     "edge_uj": 1.80768,
+     "local_uj": 0.55766,
+     "cheapest": "local"
+    },
+    {
+     "device": "phone",
+     "link": "ble",
+     "radio_factor": 0.03,
+     "centralized_uj": 27.647999999999996,
+     "edge_uj": 4.447679999999999,
+     "local_uj": 0.6576599999999999,
+     "cheapest": "local"
+    },
+    {
+     "device": "phone",
+     "link": "ble",
+     "radio_factor": 0.1,
+     "centralized_uj": 92.16,
+     "edge_uj": 13.687680000000002,
+     "local_uj": 1.0076599999999998,
+     "cheapest": "local"
+    },
+    {
+     "device": "phone",
+     "link": "ble",
+     "radio_factor": 0.3,
+     "centralized_uj": 276.47999999999996,
+     "edge_uj": 40.08767999999999,
+     "local_uj": 2.00766,
+     "cheapest": "local"
+    },
+    {
+     "device": "phone",
+     "link": "ble",
+     "radio_factor": 1,
+     "centralized_uj": 921.5999999999999,
+     "edge_uj": 132.48767999999998,
+     "local_uj": 5.50766,
+     "cheapest": "local"
+    },
+    {
+     "device": "phone",
+     "link": "ble",
+     "radio_factor": 3,
+     "centralized_uj": 2764.8,
+     "edge_uj": 396.48768,
+     "local_uj": 15.507659999999998,
+     "cheapest": "local"
+    },
+    {
+     "device": "phone",
+     "link": "ble",
+     "radio_factor": 10,
+     "centralized_uj": 9216.0,
+     "edge_uj": 1320.48768,
+     "local_uj": 50.507659999999994,
+     "cheapest": "local"
+    },
+    {
+     "device": "phone",
+     "link": "wifi",
+     "radio_factor": 0.01,
+     "centralized_uj": 2.3040000000000003,
+     "edge_uj": 0.81768,
+     "local_uj": 0.52016,
+     "cheapest": "local"
+    },
+    {
+     "device": "phone",
+     "link": "wifi",
+     "radio_factor": 0.03,
+     "centralized_uj": 6.911999999999999,
+     "edge_uj": 1.4776799999999997,
+     "local_uj": 0.54516,
+     "cheapest": "local"
+    },
+    {
+     "device": "phone",
+     "link": "wifi",
+     "radio_factor": 0.1,
+     "centralized_uj": 23.04,
+     "edge_uj": 3.78768,
+     "local_uj": 0.63266,
+     "cheapest": "local"
+    },
+    {
+     "device": "phone",
+     "link": "wifi",
+     "radio_factor": 0.3,
+     "centralized_uj": 69.11999999999999,
+     "edge_uj": 10.38768,
+     "local_uj": 0.88266,
+     "cheapest": "local"
+    },
+    {
+     "device": "phone",
+     "link": "wifi",
+     "radio_factor": 1,
+     "centralized_uj": 230.39999999999998,
+     "edge_uj": 33.48767999999999,
+     "local_uj": 1.7576599999999998,
+     "cheapest": "local"
+    },
+    {
+     "device": "phone",
+     "link": "wifi",
+     "radio_factor": 3,
+     "centralized_uj": 691.2,
+     "edge_uj": 99.48768,
+     "local_uj": 4.25766,
+     "cheapest": "local"
+    },
+    {
+     "device": "phone",
+     "link": "wifi",
+     "radio_factor": 10,
+     "centralized_uj": 2304.0,
+     "edge_uj": 330.48768,
+     "local_uj": 13.007659999999998,
+     "cheapest": "local"
+    },
+    {
+     "device": "phone",
+     "link": "cellular",
+     "radio_factor": 0.01,
+     "centralized_uj": 46.08,
+     "edge_uj": 7.087680000000001,
+     "local_uj": 0.7576599999999999,
+     "cheapest": "local"
+    },
+    {
+     "device": "phone",
+     "link": "cellular",
+     "radio_factor": 0.03,
+     "centralized_uj": 138.23999999999998,
+     "edge_uj": 20.287679999999998,
+     "local_uj": 1.25766,
+     "cheapest": "local"
+    },
+    {
+     "device": "phone",
+     "link": "cellular",
+     "radio_factor": 0.1,
+     "centralized_uj": 460.79999999999995,
+     "edge_uj": 66.48768,
+     "local_uj": 3.0076599999999996,
+     "cheapest": "local"
+    },
+    {
+     "device": "phone",
+     "link": "cellular",
+     "radio_factor": 0.3,
+     "centralized_uj": 1382.4,
+     "edge_uj": 198.48767999999998,
+     "local_uj": 8.007659999999998,
+     "cheapest": "local"
+    },
+    {
+     "device": "phone",
+     "link": "cellular",
+     "radio_factor": 1,
+     "centralized_uj": 4608.0,
+     "edge_uj": 660.48768,
+     "local_uj": 25.507659999999998,
+     "cheapest": "local"
+    },
+    {
+     "device": "phone",
+     "link": "cellular",
+     "radio_factor": 3,
+     "centralized_uj": 13824.0,
+     "edge_uj": 1980.48768,
+     "local_uj": 75.50766000000002,
+     "cheapest": "local"
+    },
+    {
+     "device": "phone",
+     "link": "cellular",
+     "radio_factor": 10,
+     "centralized_uj": 46079.99999999999,
+     "edge_uj": 6600.487679999999,
+     "local_uj": 250.50766,
+     "cheapest": "local"
+    }
+   ]
+  }
+ ],
+ "notes": [
+  "Device ops/s, energy per operation and radio energy per byte are stated assumptions (configs/e4_cost.yaml), not measurements. Wall times were measured on this machine and are shown for scale only."
+ ]
+}

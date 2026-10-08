@@ -1,0 +1,271 @@
+{
+ "title": "E2 Adversary strength",
+ "question": "Does the ordering of cells by exposure hold for weaker and stronger adversaries?",
+ "findings": [
+  "Kendall tau of the exposure ranking against the reference adversary (strong, 50% enrolment): 0.83 to 0.96 across 7 other adversaries."
+ ],
+ "tables": [
+  {
+   "id": "settings",
+   "caption": "Re-identification accuracy per payload, by adversary",
+   "columns": [
+    {
+     "key": "setting",
+     "label": "Adversary",
+     "align": "l"
+    },
+    {
+     "key": "kendall_tau",
+     "label": "Kendall tau vs reference",
+     "align": "r"
+    },
+    {
+     "key": "centralized/L0",
+     "label": "centralized/L0",
+     "align": "r"
+    },
+    {
+     "key": "centralized/L1",
+     "label": "centralized/L1",
+     "align": "r"
+    },
+    {
+     "key": "centralized/L2",
+     "label": "centralized/L2",
+     "align": "r"
+    },
+    {
+     "key": "centralized/L3",
+     "label": "centralized/L3",
+     "align": "r"
+    },
+    {
+     "key": "centralized/L4",
+     "label": "centralized/L4",
+     "align": "r"
+    },
+    {
+     "key": "edge/L0",
+     "label": "edge/L0",
+     "align": "r"
+    },
+    {
+     "key": "edge/L1",
+     "label": "edge/L1",
+     "align": "r"
+    },
+    {
+     "key": "edge/L2",
+     "label": "edge/L2",
+     "align": "r"
+    },
+    {
+     "key": "edge/L3",
+     "label": "edge/L3",
+     "align": "r"
+    },
+    {
+     "key": "edge/L4",
+     "label": "edge/L4",
+     "align": "r"
+    },
+    {
+     "key": "local/L0",
+     "label": "local/L0",
+     "align": "r"
+    },
+    {
+     "key": "local/L1",
+     "label": "local/L1",
+     "align": "r"
+    },
+    {
+     "key": "local/L2",
+     "label": "local/L2",
+     "align": "r"
+    },
+    {
+     "key": "local/L3",
+     "label": "local/L3",
+     "align": "r"
+    },
+    {
+     "key": "local/L4",
+     "label": "local/L4",
+     "align": "r"
+    }
+   ],
+   "rows": [
+    {
+     "setting": "linear, enrol 10%",
+     "share": 0.1,
+     "attacker": "linear",
+     "kendall_tau": 0.8803928527035957,
+     "centralized/L0": 0.4156588953995761,
+     "centralized/L1": 0.3655404563022067,
+     "centralized/L2": 0.33586834559281886,
+     "centralized/L3": 0.25084154095499317,
+     "centralized/L4": 0.2296,
+     "edge/L0": 0.355441964842289,
+     "edge/L1": 0.32389976312180524,
+     "edge/L2": 0.31380127166188754,
+     "edge/L3": 0.035531729210821594,
+     "edge/L4": 0.032,
+     "local/L0": 0.04737563894776212,
+     "local/L1": 0.04762498441590824,
+     "local/L2": 0.04762498441590824,
+     "local/L3": 0.0447575115322279,
+     "local/L4": 0.0424
+    },
+    {
+     "setting": "strong, enrol 10%",
+     "share": 0.1,
+     "attacker": "strong",
+     "kendall_tau": 0.8995318277623696,
+     "centralized/L0": 0.4705148983917217,
+     "centralized/L1": 0.4535594065577858,
+     "centralized/L2": 0.4235132776461788,
+     "centralized/L3": 0.35057972821343975,
+     "centralized/L4": 0.2832,
+     "edge/L0": 0.4165316045380875,
+     "edge/L1": 0.39857873083156714,
+     "edge/L2": 0.39845405809749407,
+     "edge/L3": 0.03416032913601795,
+     "edge/L4": 0.0336,
+     "local/L0": 0.0477496571499813,
+     "local/L1": 0.04762498441590824,
+     "local/L2": 0.04762498441590824,
+     "local/L3": 0.0447575115322279,
+     "local/L4": 0.0408
+    },
+    {
+     "setting": "linear, enrol 30%",
+     "share": 0.3,
+     "attacker": "linear",
+     "kendall_tau": 0.8285714285714286,
+     "centralized/L0": 0.47367717797969,
+     "centralized/L1": 0.42597541421699625,
+     "centralized/L2": 0.40165686798503475,
+     "centralized/L3": 0.2856761090326029,
+     "centralized/L4": 0.2392055267702936,
+     "edge/L0": 0.39150187065740244,
+     "edge/L1": 0.36063602351683594,
+     "edge/L2": 0.35061464457509356,
+     "edge/L3": 0.033003741314804914,
+     "edge/L4": 0.03367875647668394,
+     "local/L0": 0.048904329235702836,
+     "local/L1": 0.04569748797434527,
+     "local/L2": 0.04529663281667558,
+     "local/L3": 0.043425975414217,
+     "local/L4": 0.045768566493955096
+    },
+    {
+     "setting": "strong, enrol 30%",
+     "share": 0.3,
+     "attacker": "strong",
+     "kendall_tau": 0.8476190476190477,
+     "centralized/L0": 0.5113575628006414,
+     "centralized/L1": 0.457910208444682,
+     "centralized/L2": 0.4477552111170497,
+     "centralized/L3": 0.3727952966328167,
+     "centralized/L4": 0.27806563039723664,
+     "edge/L0": 0.4573757349011224,
+     "edge/L1": 0.4247728487439872,
+     "edge/L2": 0.4208979155531801,
+     "edge/L3": 0.0343399251737039,
+     "edge/L4": 0.03367875647668394,
+     "local/L0": 0.04783538214858365,
+     "local/L1": 0.04569748797434527,
+     "local/L2": 0.04529663281667558,
+     "local/L3": 0.043425975414217,
+     "local/L4": 0.04922279792746114
+    },
+    {
+     "setting": "linear, enrol 50%",
+     "share": 0.5,
+     "attacker": "linear",
+     "kendall_tau": 0.9047619047619049,
+     "centralized/L0": 0.5319066147859922,
+     "centralized/L1": 0.4821011673151751,
+     "centralized/L2": 0.4529182879377432,
+     "centralized/L3": 0.3142023346303502,
+     "centralized/L4": 0.29056603773584905,
+     "edge/L0": 0.4715953307392996,
+     "edge/L1": 0.42120622568093385,
+     "edge/L2": 0.40797665369649805,
+     "edge/L3": 0.03463035019455253,
+     "edge/L4": 0.04025157232704402,
+     "local/L0": 0.06031128404669261,
+     "local/L1": 0.05525291828793774,
+     "local/L2": 0.054669260700389105,
+     "local/L3": 0.05175097276264591,
+     "local/L4": 0.04150943396226415
+    },
+    {
+     "setting": "strong, enrol 50%",
+     "share": 0.5,
+     "attacker": "strong",
+     "kendall_tau": 1.0,
+     "centralized/L0": 0.5686770428015564,
+     "centralized/L1": 0.5190661478599222,
+     "centralized/L2": 0.49571984435797667,
+     "centralized/L3": 0.42315175097276264,
+     "centralized/L4": 0.3433962264150943,
+     "edge/L0": 0.5342412451361868,
+     "edge/L1": 0.5299610894941634,
+     "edge/L2": 0.5173151750972763,
+     "edge/L3": 0.0357976653696498,
+     "edge/L4": 0.02012578616352201,
+     "local/L0": 0.05856031128404669,
+     "local/L1": 0.05525291828793774,
+     "local/L2": 0.054669260700389105,
+     "local/L3": 0.05175097276264591,
+     "local/L4": 0.04150943396226415
+    },
+    {
+     "setting": "linear, enrol 70%",
+     "share": 0.7,
+     "attacker": "linear",
+     "kendall_tau": 0.9428571428571428,
+     "centralized/L0": 0.5629257798494084,
+     "centralized/L1": 0.5177482968806024,
+     "centralized/L2": 0.490139835066332,
+     "centralized/L3": 0.3305844388669774,
+     "centralized/L4": 0.30434782608695654,
+     "edge/L0": 0.5274291860882037,
+     "edge/L1": 0.47651487988526353,
+     "edge/L2": 0.45787020437432774,
+     "edge/L3": 0.03944065973467192,
+     "edge/L4": 0.016018306636155607,
+     "local/L0": 0.0627465041233417,
+     "local/L1": 0.0494801003944066,
+     "local/L2": 0.04912154894227322,
+     "local/L3": 0.045177482968806026,
+     "local/L4": 0.041189931350114416
+    },
+    {
+     "setting": "strong, enrol 70%",
+     "share": 0.7,
+     "attacker": "strong",
+     "kendall_tau": 0.961904761904762,
+     "centralized/L0": 0.6238795267120831,
+     "centralized/L1": 0.5640014342058085,
+     "centralized/L2": 0.5514521333811402,
+     "centralized/L3": 0.4718537110075296,
+     "centralized/L4": 0.40503432494279173,
+     "edge/L0": 0.6593761204732879,
+     "edge/L1": 0.6023664395840803,
+     "edge/L2": 0.5708139117963428,
+     "edge/L3": 0.03549659376120473,
+     "edge/L4": 0.02288329519450801,
+     "local/L0": 0.06167084976694156,
+     "local/L1": 0.0494801003944066,
+     "local/L2": 0.04912154894227322,
+     "local/L3": 0.04625313732520617,
+     "local/L4": 0.041189931350114416
+    }
+   ]
+  }
+ ],
+ "notes": []
+}

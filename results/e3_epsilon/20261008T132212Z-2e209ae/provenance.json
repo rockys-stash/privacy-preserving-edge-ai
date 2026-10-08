@@ -1,0 +1,20 @@
+{
+ "experiment": "e3_epsilon",
+ "run_id": "20261008T132212Z-2e209ae",
+ "commit": "2e209ae425a63d1ae06f24544d804c5954992548",
+ "dirty": false,
+ "created_at": "2026-10-08T13:26:10+00:00",
+ "runtime_seconds": 238.28,
+ "description": "Local differential privacy: accuracy and re-identification against epsilon.",
+ "config_sha256": "6df97db51800f066fad76e6a8df28632acefc9b6ffca14da60b8d427c3e3a0a4",
+ "python": "3.13.16",
+ "machine": "x86_64",
+ "cpus": 4,
+ "packages": {
+  "scikit-learn": "1.9.1",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1"
+ },
+ "dataset_sha256": "2045e435c955214b38145fb5fa00776c72814f01b203fec405152dac7d5bfeb0",
+ "subjects": "all 30"
+}
