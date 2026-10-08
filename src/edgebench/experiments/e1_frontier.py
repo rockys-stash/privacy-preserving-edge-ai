@@ -169,4 +169,8 @@ def run(cfg: dict[str, Any], results: Path | None = None) -> Path:
         rd.write_json("exposure.json", exposure)
         cells = summarise(s, folds, official, exposure, majority)
         rd.write_json("cells.json", cells)
+        n = len(np.unique(bench.corpus().subject))
+        rd.write_json(
+            "baselines.json", {"majority_accuracy": majority, "chance_reidentification": 1 / n, "subjects": n}
+        )
     return rd.path
