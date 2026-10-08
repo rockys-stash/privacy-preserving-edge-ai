@@ -75,7 +75,7 @@ def test_randomised_response_keep_rate() -> None:
     assert abs((out == 0).mean() - p_keep) < 0.005
     # the other labels are uniform
     counts = np.bincount(out[out != 0], minlength=6)[1:]
-    assert np.min(counts) / np.max(counts) > 0.95
+    assert float(np.min(counts)) / float(np.max(counts)) > 0.95
 
 
 def test_smoothing_is_causal_and_stays_inside_a_segment() -> None:
