@@ -122,7 +122,7 @@ def load_config(path: Path) -> dict[str, Any]:
             raise ValueError(f"!include outside configs/: {target}")
         return load_config(target)
 
-    loader = type("L", (_Loader,), {})
+    loader: type[_Loader] = type("L", (_Loader,), {})
     loader.add_constructor("!include", include)
     data = yaml.load(path.read_text(encoding="utf-8"), Loader=loader)
     if not isinstance(data, dict):
