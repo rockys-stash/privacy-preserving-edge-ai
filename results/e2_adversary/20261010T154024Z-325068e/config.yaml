@@ -1,0 +1,22 @@
+seed: 0
+n_kernels: 500
+shares:
+- 0.1
+- 0.3
+- 0.5
+- 0.7
+families:
+- strong
+- linear
+reference_share: 0.5
+reference_family: strong
+workers: 4
+privacy:
+  raw_downsample: 2
+  raw_bits: 8
+  raw_noise: 0.5
+  feature_bits: 4
+  feature_epsilon: 4.0
+  label_epsilon: 4.0
+  smooth: 4
+  block: 8

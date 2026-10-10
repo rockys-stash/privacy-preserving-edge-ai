@@ -1,0 +1,812 @@
+[
+ {
+  "cell": "centralized/L0",
+  "arch": "centralized",
+  "level": 0,
+  "device": "microcontroller",
+  "link": "ble",
+  "latency_s": 0.25447666050008805,
+  "energy_uj": 921.5999999999999
+ },
+ {
+  "cell": "centralized/L1",
+  "arch": "centralized",
+  "level": 1,
+  "device": "microcontroller",
+  "link": "ble",
+  "latency_s": 0.18663260050006547,
+  "energy_uj": 614.4
+ },
+ {
+  "cell": "centralized/L2",
+  "arch": "centralized",
+  "level": 2,
+  "device": "microcontroller",
+  "link": "ble",
+  "latency_s": 0.08020102899983854,
+  "energy_uj": 76.992
+ },
+ {
+  "cell": "centralized/L3",
+  "arch": "centralized",
+  "level": 3,
+  "device": "microcontroller",
+  "link": "ble",
+  "latency_s": 0.08167369350019238,
+  "energy_uj": 77.10719999999999
+ },
+ {
+  "cell": "centralized/L4",
+  "arch": "centralized",
+  "level": 4,
+  "device": "microcontroller",
+  "link": "ble",
+  "latency_s": 4.5589834900002195,
+  "energy_uj": 11.990399999999998
+ },
+ {
+  "cell": "edge/L0",
+  "arch": "edge",
+  "level": 0,
+  "device": "microcontroller",
+  "link": "ble",
+  "latency_s": 0.06089460750008602,
+  "energy_uj": 136.87679999999997
+ },
+ {
+  "cell": "edge/L1",
+  "arch": "edge",
+  "level": 1,
+  "device": "microcontroller",
+  "link": "ble",
+  "latency_s": 0.051897004999828036,
+  "energy_uj": 91.2512
+ },
+ {
+  "cell": "edge/L2",
+  "arch": "edge",
+  "level": 2,
+  "device": "microcontroller",
+  "link": "ble",
+  "latency_s": 0.03678758050016895,
+  "energy_uj": 14.2842
+ },
+ {
+  "cell": "edge/L3",
+  "arch": "edge",
+  "level": 3,
+  "device": "microcontroller",
+  "link": "ble",
+  "latency_s": 0.04283722299999195,
+  "energy_uj": 47.3172
+ },
+ {
+  "cell": "edge/L4",
+  "arch": "edge",
+  "level": 4,
+  "device": "microcontroller",
+  "link": "ble",
+  "latency_s": 4.522979914999719,
+  "energy_uj": 10.11795
+ },
+ {
+  "cell": "local/L0",
+  "arch": "local",
+  "level": 0,
+  "device": "microcontroller",
+  "link": "ble",
+  "latency_s": 0.03150766,
+  "energy_uj": 10.0766
+ },
+ {
+  "cell": "local/L1",
+  "arch": "local",
+  "level": 1,
+  "device": "microcontroller",
+  "link": "ble",
+  "latency_s": 0.030547659999999997,
+  "energy_uj": 5.276599999999999
+ },
+ {
+  "cell": "local/L2",
+  "arch": "local",
+  "level": 2,
+  "device": "microcontroller",
+  "link": "ble",
+  "latency_s": 0.030547739999999997,
+  "energy_uj": 5.2774
+ },
+ {
+  "cell": "local/L3",
+  "arch": "local",
+  "level": 3,
+  "device": "microcontroller",
+  "link": "ble",
+  "latency_s": 0.030547779999999997,
+  "energy_uj": 5.2778
+ },
+ {
+  "cell": "local/L4",
+  "arch": "local",
+  "level": 4,
+  "device": "microcontroller",
+  "link": "ble",
+  "latency_s": 4.5105477800000005,
+  "energy_uj": 5.108924999999999
+ },
+ {
+  "cell": "centralized/L0",
+  "arch": "centralized",
+  "level": 0,
+  "device": "microcontroller",
+  "link": "wifi",
+  "latency_s": 0.05384306050008804,
+  "energy_uj": 230.39999999999998
+ },
+ {
+  "cell": "centralized/L1",
+  "arch": "centralized",
+  "level": 1,
+  "device": "microcontroller",
+  "link": "wifi",
+  "latency_s": 0.046210200500065454,
+  "energy_uj": 153.6
+ },
+ {
+  "cell": "centralized/L2",
+  "arch": "centralized",
+  "level": 2,
+  "device": "microcontroller",
+  "link": "wifi",
+  "latency_s": 0.045148228999838544,
+  "energy_uj": 19.392
+ },
+ {
+  "cell": "centralized/L3",
+  "arch": "centralized",
+  "level": 3,
+  "device": "microcontroller",
+  "link": "wifi",
+  "latency_s": 0.046620893500192384,
+  "energy_uj": 19.507199999999997
+ },
+ {
+  "cell": "centralized/L4",
+  "arch": "centralized",
+  "level": 4,
+  "device": "microcontroller",
+  "link": "wifi",
+  "latency_s": 4.52393069000022,
+  "energy_uj": 3.0263999999999993
+ },
+ {
+  "cell": "edge/L0",
+  "arch": "edge",
+  "level": 0,
+  "device": "microcontroller",
+  "link": "wifi",
+  "latency_s": 0.015022607500086023,
+  "energy_uj": 37.876799999999996
+ },
+ {
+  "cell": "edge/L1",
+  "arch": "edge",
+  "level": 1,
+  "device": "microcontroller",
+  "link": "wifi",
+  "latency_s": 0.014649004999828035,
+  "energy_uj": 25.2512
+ },
+ {
+  "cell": "edge/L2",
+  "arch": "edge",
+  "level": 2,
+  "device": "microcontroller",
+  "link": "wifi",
+  "latency_s": 0.014631580500168946,
+  "energy_uj": 6.0342
+ },
+ {
+  "cell": "edge/L3",
+  "arch": "edge",
+  "level": 3,
+  "device": "microcontroller",
+  "link": "wifi",
+  "latency_s": 0.014213222999991951,
+  "energy_uj": 14.3172
+ },
+ {
+  "cell": "edge/L4",
+  "arch": "edge",
+  "level": 4,
+  "device": "microcontroller",
+  "link": "wifi",
+  "latency_s": 4.494355914999719,
+  "energy_uj": 4.9823249999999994
+ },
+ {
+  "cell": "local/L0",
+  "arch": "local",
+  "level": 0,
+  "device": "microcontroller",
+  "link": "wifi",
+  "latency_s": 0.01052766,
+  "energy_uj": 6.3266
+ },
+ {
+  "cell": "local/L1",
+  "arch": "local",
+  "level": 1,
+  "device": "microcontroller",
+  "link": "wifi",
+  "latency_s": 0.01050846,
+  "energy_uj": 5.1266
+ },
+ {
+  "cell": "local/L2",
+  "arch": "local",
+  "level": 2,
+  "device": "microcontroller",
+  "link": "wifi",
+  "latency_s": 0.01050854,
+  "energy_uj": 5.127400000000001
+ },
+ {
+  "cell": "local/L3",
+  "arch": "local",
+  "level": 3,
+  "device": "microcontroller",
+  "link": "wifi",
+  "latency_s": 0.01050858,
+  "energy_uj": 5.127800000000001
+ },
+ {
+  "cell": "local/L4",
+  "arch": "local",
+  "level": 4,
+  "device": "microcontroller",
+  "link": "wifi",
+  "latency_s": 4.49050858,
+  "energy_uj": 5.08558125
+ },
+ {
+  "cell": "centralized/L0",
+  "arch": "centralized",
+  "level": 0,
+  "device": "microcontroller",
+  "link": "cellular",
+  "latency_s": 0.13702066050008804,
+  "energy_uj": 4608.0
+ },
+ {
+  "cell": "centralized/L1",
+  "arch": "centralized",
+  "level": 1,
+  "device": "microcontroller",
+  "link": "cellular",
+  "latency_s": 0.11832860050006545,
+  "energy_uj": 3072.0
+ },
+ {
+  "cell": "centralized/L2",
+  "arch": "centralized",
+  "level": 2,
+  "device": "microcontroller",
+  "link": "cellular",
+  "latency_s": 0.09791302899983854,
+  "energy_uj": 384.192
+ },
+ {
+  "cell": "centralized/L3",
+  "arch": "centralized",
+  "level": 3,
+  "device": "microcontroller",
+  "link": "cellular",
+  "latency_s": 0.09938569350019238,
+  "energy_uj": 384.3072
+ },
+ {
+  "cell": "centralized/L4",
+  "arch": "centralized",
+  "level": 4,
+  "device": "microcontroller",
+  "link": "cellular",
+  "latency_s": 4.576695490000219,
+  "energy_uj": 59.7984
+ },
+ {
+  "cell": "edge/L0",
+  "arch": "edge",
+  "level": 0,
+  "device": "microcontroller",
+  "link": "cellular",
+  "latency_s": 0.06977460750008603,
+  "energy_uj": 664.8768
+ },
+ {
+  "cell": "edge/L1",
+  "arch": "edge",
+  "level": 1,
+  "device": "microcontroller",
+  "link": "cellular",
+  "latency_s": 0.06781700499982803,
+  "energy_uj": 443.2511999999999
+ },
+ {
+  "cell": "edge/L2",
+  "arch": "edge",
+  "level": 2,
+  "device": "microcontroller",
+  "link": "cellular",
+  "latency_s": 0.06502758050016895,
+  "energy_uj": 58.28419999999999
+ },
+ {
+  "cell": "edge/L3",
+  "arch": "edge",
+  "level": 3,
+  "device": "microcontroller",
+  "link": "cellular",
+  "latency_s": 0.06579722299999194,
+  "energy_uj": 223.31719999999999
+ },
+ {
+  "cell": "edge/L4",
+  "arch": "edge",
+  "level": 4,
+  "device": "microcontroller",
+  "link": "cellular",
+  "latency_s": 4.545939914999719,
+  "energy_uj": 37.507949999999994
+ },
+ {
+  "cell": "local/L0",
+  "arch": "local",
+  "level": 0,
+  "device": "microcontroller",
+  "link": "cellular",
+  "latency_s": 0.06070766,
+  "energy_uj": 30.076599999999996
+ },
+ {
+  "cell": "local/L1",
+  "arch": "local",
+  "level": 1,
+  "device": "microcontroller",
+  "link": "cellular",
+  "latency_s": 0.06051566,
+  "energy_uj": 6.076599999999999
+ },
+ {
+  "cell": "local/L2",
+  "arch": "local",
+  "level": 2,
+  "device": "microcontroller",
+  "link": "cellular",
+  "latency_s": 0.06051574,
+  "energy_uj": 6.0774
+ },
+ {
+  "cell": "local/L3",
+  "arch": "local",
+  "level": 3,
+  "device": "microcontroller",
+  "link": "cellular",
+  "latency_s": 0.06051578,
+  "energy_uj": 6.0778
+ },
+ {
+  "cell": "local/L4",
+  "arch": "local",
+  "level": 4,
+  "device": "microcontroller",
+  "link": "cellular",
+  "latency_s": 4.540515780000001,
+  "energy_uj": 5.2334249999999995
+ },
+ {
+  "cell": "centralized/L0",
+  "arch": "centralized",
+  "level": 0,
+  "device": "phone",
+  "link": "ble",
+  "latency_s": 0.25447666050008805,
+  "energy_uj": 921.5999999999999
+ },
+ {
+  "cell": "centralized/L1",
+  "arch": "centralized",
+  "level": 1,
+  "device": "phone",
+  "link": "ble",
+  "latency_s": 0.18663260050006547,
+  "energy_uj": 614.4
+ },
+ {
+  "cell": "centralized/L2",
+  "arch": "centralized",
+  "level": 2,
+  "device": "phone",
+  "link": "ble",
+  "latency_s": 0.08018202099983854,
+  "energy_uj": 76.8192
+ },
+ {
+  "cell": "centralized/L3",
+  "arch": "centralized",
+  "level": 3,
+  "device": "phone",
+  "link": "ble",
+  "latency_s": 0.08164328070019239,
+  "energy_uj": 76.83071999999999
+ },
+ {
+  "cell": "centralized/L4",
+  "arch": "centralized",
+  "level": 4,
+  "device": "phone",
+  "link": "ble",
+  "latency_s": 4.558979688400219,
+  "energy_uj": 11.955839999999998
+ },
+ {
+  "cell": "edge/L0",
+  "arch": "edge",
+  "level": 0,
+  "device": "phone",
+  "link": "ble",
+  "latency_s": 0.06041180430008602,
+  "energy_uj": 132.48767999999998
+ },
+ {
+  "cell": "edge/L1",
+  "arch": "edge",
+  "level": 1,
+  "device": "phone",
+  "link": "ble",
+  "latency_s": 0.05157513619982804,
+  "energy_uj": 88.32512
+ },
+ {
+  "cell": "edge/L2",
+  "arch": "edge",
+  "level": 2,
+  "device": "phone",
+  "link": "ble",
+  "latency_s": 0.03646244470016895,
+  "energy_uj": 11.32842
+ },
+ {
+  "cell": "edge/L3",
+  "arch": "edge",
+  "level": 3,
+  "device": "phone",
+  "link": "ble",
+  "latency_s": 0.04250882019999195,
+  "energy_uj": 44.33172
+ },
+ {
+  "cell": "edge/L4",
+  "arch": "edge",
+  "level": 4,
+  "device": "phone",
+  "link": "ble",
+  "latency_s": 4.522656140449719,
+  "energy_uj": 7.174544999999999
+ },
+ {
+  "cell": "local/L0",
+  "arch": "local",
+  "level": 0,
+  "device": "phone",
+  "link": "ble",
+  "latency_s": 0.0310050766,
+  "energy_uj": 5.50766
+ },
+ {
+  "cell": "local/L1",
+  "arch": "local",
+  "level": 1,
+  "device": "phone",
+  "link": "ble",
+  "latency_s": 0.030045076599999998,
+  "energy_uj": 0.70766
+ },
+ {
+  "cell": "local/L2",
+  "arch": "local",
+  "level": 2,
+  "device": "phone",
+  "link": "ble",
+  "latency_s": 0.0300450774,
+  "energy_uj": 0.7077399999999999
+ },
+ {
+  "cell": "local/L3",
+  "arch": "local",
+  "level": 3,
+  "device": "phone",
+  "link": "ble",
+  "latency_s": 0.030045077799999997,
+  "energy_uj": 0.70778
+ },
+ {
+  "cell": "local/L4",
+  "arch": "local",
+  "level": 4,
+  "device": "phone",
+  "link": "ble",
+  "latency_s": 4.5100450778,
+  "energy_uj": 0.538905
+ },
+ {
+  "cell": "centralized/L0",
+  "arch": "centralized",
+  "level": 0,
+  "device": "phone",
+  "link": "wifi",
+  "latency_s": 0.05384306050008804,
+  "energy_uj": 230.39999999999998
+ },
+ {
+  "cell": "centralized/L1",
+  "arch": "centralized",
+  "level": 1,
+  "device": "phone",
+  "link": "wifi",
+  "latency_s": 0.046210200500065454,
+  "energy_uj": 153.6
+ },
+ {
+  "cell": "centralized/L2",
+  "arch": "centralized",
+  "level": 2,
+  "device": "phone",
+  "link": "wifi",
+  "latency_s": 0.04512922099983854,
+  "energy_uj": 19.2192
+ },
+ {
+  "cell": "centralized/L3",
+  "arch": "centralized",
+  "level": 3,
+  "device": "phone",
+  "link": "wifi",
+  "latency_s": 0.04659048070019239,
+  "energy_uj": 19.23072
+ },
+ {
+  "cell": "centralized/L4",
+  "arch": "centralized",
+  "level": 4,
+  "device": "phone",
+  "link": "wifi",
+  "latency_s": 4.5239268884002195,
+  "energy_uj": 2.99184
+ },
+ {
+  "cell": "edge/L0",
+  "arch": "edge",
+  "level": 0,
+  "device": "phone",
+  "link": "wifi",
+  "latency_s": 0.014539804300086022,
+  "energy_uj": 33.48767999999999
+ },
+ {
+  "cell": "edge/L1",
+  "arch": "edge",
+  "level": 1,
+  "device": "phone",
+  "link": "wifi",
+  "latency_s": 0.014327136199828035,
+  "energy_uj": 22.32512
+ },
+ {
+  "cell": "edge/L2",
+  "arch": "edge",
+  "level": 2,
+  "device": "phone",
+  "link": "wifi",
+  "latency_s": 0.014306444700168947,
+  "energy_uj": 3.07842
+ },
+ {
+  "cell": "edge/L3",
+  "arch": "edge",
+  "level": 3,
+  "device": "phone",
+  "link": "wifi",
+  "latency_s": 0.013884820199991951,
+  "energy_uj": 11.33172
+ },
+ {
+  "cell": "edge/L4",
+  "arch": "edge",
+  "level": 4,
+  "device": "phone",
+  "link": "wifi",
+  "latency_s": 4.494032140449719,
+  "energy_uj": 2.0389199999999996
+ },
+ {
+  "cell": "local/L0",
+  "arch": "local",
+  "level": 0,
+  "device": "phone",
+  "link": "wifi",
+  "latency_s": 0.0100250766,
+  "energy_uj": 1.7576599999999998
+ },
+ {
+  "cell": "local/L1",
+  "arch": "local",
+  "level": 1,
+  "device": "phone",
+  "link": "wifi",
+  "latency_s": 0.010005876600000001,
+  "energy_uj": 0.5576599999999999
+ },
+ {
+  "cell": "local/L2",
+  "arch": "local",
+  "level": 2,
+  "device": "phone",
+  "link": "wifi",
+  "latency_s": 0.0100058774,
+  "energy_uj": 0.55774
+ },
+ {
+  "cell": "local/L3",
+  "arch": "local",
+  "level": 3,
+  "device": "phone",
+  "link": "wifi",
+  "latency_s": 0.0100058778,
+  "energy_uj": 0.55778
+ },
+ {
+  "cell": "local/L4",
+  "arch": "local",
+  "level": 4,
+  "device": "phone",
+  "link": "wifi",
+  "latency_s": 4.490005877800001,
+  "energy_uj": 0.5155612500000001
+ },
+ {
+  "cell": "centralized/L0",
+  "arch": "centralized",
+  "level": 0,
+  "device": "phone",
+  "link": "cellular",
+  "latency_s": 0.13702066050008804,
+  "energy_uj": 4608.0
+ },
+ {
+  "cell": "centralized/L1",
+  "arch": "centralized",
+  "level": 1,
+  "device": "phone",
+  "link": "cellular",
+  "latency_s": 0.11832860050006545,
+  "energy_uj": 3072.0
+ },
+ {
+  "cell": "centralized/L2",
+  "arch": "centralized",
+  "level": 2,
+  "device": "phone",
+  "link": "cellular",
+  "latency_s": 0.09789402099983854,
+  "energy_uj": 384.0192
+ },
+ {
+  "cell": "centralized/L3",
+  "arch": "centralized",
+  "level": 3,
+  "device": "phone",
+  "link": "cellular",
+  "latency_s": 0.09935528070019238,
+  "energy_uj": 384.03072
+ },
+ {
+  "cell": "centralized/L4",
+  "arch": "centralized",
+  "level": 4,
+  "device": "phone",
+  "link": "cellular",
+  "latency_s": 4.576691688400219,
+  "energy_uj": 59.763839999999995
+ },
+ {
+  "cell": "edge/L0",
+  "arch": "edge",
+  "level": 0,
+  "device": "phone",
+  "link": "cellular",
+  "latency_s": 0.06929180430008602,
+  "energy_uj": 660.48768
+ },
+ {
+  "cell": "edge/L1",
+  "arch": "edge",
+  "level": 1,
+  "device": "phone",
+  "link": "cellular",
+  "latency_s": 0.06749513619982803,
+  "energy_uj": 440.3251199999999
+ },
+ {
+  "cell": "edge/L2",
+  "arch": "edge",
+  "level": 2,
+  "device": "phone",
+  "link": "cellular",
+  "latency_s": 0.06470244470016895,
+  "energy_uj": 55.32842
+ },
+ {
+  "cell": "edge/L3",
+  "arch": "edge",
+  "level": 3,
+  "device": "phone",
+  "link": "cellular",
+  "latency_s": 0.06546882019999195,
+  "energy_uj": 220.33172
+ },
+ {
+  "cell": "edge/L4",
+  "arch": "edge",
+  "level": 4,
+  "device": "phone",
+  "link": "cellular",
+  "latency_s": 4.545616140449719,
+  "energy_uj": 34.564545
+ },
+ {
+  "cell": "local/L0",
+  "arch": "local",
+  "level": 0,
+  "device": "phone",
+  "link": "cellular",
+  "latency_s": 0.0602050766,
+  "energy_uj": 25.507659999999998
+ },
+ {
+  "cell": "local/L1",
+  "arch": "local",
+  "level": 1,
+  "device": "phone",
+  "link": "cellular",
+  "latency_s": 0.0600130766,
+  "energy_uj": 1.50766
+ },
+ {
+  "cell": "local/L2",
+  "arch": "local",
+  "level": 2,
+  "device": "phone",
+  "link": "cellular",
+  "latency_s": 0.060013077399999996,
+  "energy_uj": 1.5077399999999999
+ },
+ {
+  "cell": "local/L3",
+  "arch": "local",
+  "level": 3,
+  "device": "phone",
+  "link": "cellular",
+  "latency_s": 0.0600130778,
+  "energy_uj": 1.5077800000000001
+ },
+ {
+  "cell": "local/L4",
+  "arch": "local",
+  "level": 4,
+  "device": "phone",
+  "link": "cellular",
+  "latency_s": 4.5400130778,
+  "energy_uj": 0.663405
+ }
+]
