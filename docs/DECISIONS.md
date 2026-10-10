@@ -18,7 +18,7 @@
 
 **D9. ε is per payload.** The Laplace and randomised-response mechanisms give ε-local differential privacy for one payload. A person sends one every 1.28 s, so the guarantee over a session composes; the report says so next to every ε.
 
-**D10. Results provenance flags uncommitted files.** Each run records its commit and whether `src/` or `configs/` had uncommitted or untracked changes. The E1 run marked "dirty" was started while `src/edgebench/report.py` (the report writer, which no experiment imports) was not yet committed; the experiment code itself was at the recorded commit. See REPORT for the rerun check.
+**D10. Results provenance flags uncommitted files.** Each run records its commit and whether `src/` or `configs/` had uncommitted or untracked changes. The first E1 run was marked "dirty" because `src/edgebench/report.py` (the report writer, which no experiment imports) was not yet committed. All five experiments were therefore rerun from a clean checkout of `325068e` on 2026-10-10; every E1 accuracy and exposure value and the Pareto set came out identical to the first run, and only the clean runs are kept in `results/`.
 
 **D11. Accent moved from teal to violet.** DESIGN first chose a teal accent. The validated three-series palette (blue, orange, aqua) puts aqua next to teal, so selection could be mistaken for the fully local series. The accent is violet, which is not a series colour; DESIGN was updated.
 
