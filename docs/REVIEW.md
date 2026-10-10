@@ -55,6 +55,10 @@ Reviewed 2026-10-10 against [REPORT.md](REPORT.md) and the runs at commit `32506
   report's pending state and the console's keyboard transport.
 - axe-core finds no WCAG 2.1 A/AA violations on any view in light or dark mode.
 - 15 real screenshots captured from the running console with the measured results.
+- Fresh-clone check (2026-10-10): a new clone of `c1624a2` ran `make setup data test lint` and the
+  full `make benchmark`. Every generated table and figure matched the committed one except the two
+  wall-clock columns of E4 (*Device ms (here)*, *Cloud ms (here)*), which are timings of this
+  machine and differ run to run by design; byte, operation and accuracy values were identical.
 
 ## Security reviewer
 
