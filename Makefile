@@ -1,4 +1,4 @@
-.PHONY: help setup data test test-ui lint format web serve benchmark smoke report e1 e2 e3 e4 e5 clean
+.PHONY: help setup data test test-ui lint format web serve benchmark smoke report screenshots e1 e2 e3 e4 e5 clean
 
 SMOKE_SUBJECTS ?= 1,2,3,5,6,7,8,9
 
@@ -27,7 +27,7 @@ e4: data ## E4 cost and break-even
 e5: data ## E5 streaming replay against batch
 	OMP_NUM_THREADS=1 uv run edgebench experiment e5
 
-report: ## Regenerate docs/REPORT.md and docs/figures/ from the latest runs
+report: ## Regenerate docs/generated/results.md and docs/figures/ from the latest runs
 	uv run edgebench report
 
 smoke: data ## E1-E5 on 8 subjects with tiny models into results/scratch (checks the pipeline; not a result)
@@ -43,7 +43,7 @@ test-ui: web ## Browser, keyboard and axe accessibility tests (needs Chromium)
 lint: ## Ruff, mypy, ESLint and TypeScript checks
 	uv run ruff check .
 	uv run ruff format --check .
-	uv run mypy src tests
+	uv run mypy src tests scripts
 	npm --prefix web run lint
 	npm --prefix web run typecheck
 
@@ -56,6 +56,9 @@ web: ## Build the console into web/dist
 
 serve: web ## Serve the console and API on http://127.0.0.1:8000 (reads .env if present)
 	set -a; [ -f .env ] && . ./.env; set +a; uv run edgebench serve
+
+screenshots: web ## Capture console screenshots into docs/screenshots (needs Chromium)
+	uv run python scripts/screenshots.py
 
 clean: ## Remove build output, caches and smoke runs (keeps data/ and results/)
 	rm -rf web/dist results/scratch .pytest_cache .mypy_cache .ruff_cache

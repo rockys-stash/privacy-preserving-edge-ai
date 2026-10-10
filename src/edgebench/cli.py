@@ -30,7 +30,7 @@ def main(argv: list[str] | None = None) -> int:
     )
     e.add_argument("--results", type=Path, help="results root (default results/)")
     e.add_argument("--workers", type=int, help="override the config's worker count")
-    r = sub.add_parser("report", help="write docs/REPORT.md and docs/figures/ from the latest runs")
+    r = sub.add_parser("report", help="write docs/generated/results.md and docs/figures/ from the latest runs")
     r.add_argument("--results", type=Path)
     r.add_argument("--out", type=Path, default=ROOT / "docs")
     s = sub.add_parser("serve", help="serve the console and API")
